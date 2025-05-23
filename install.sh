@@ -1,0 +1,7 @@
+#!/bin/bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+echo $SCRIPT_DIR
+
+/cvmfs/oasis.opensciencegrid.org/mis/apptainer/current/bin/apptainer exec -B /cvmfs,/exp,/nashome,/opt /cvmfs/singularity.opensciencegrid.org/fermilab/fnal-dev-sl7:latest ./install_miniforge.sh
+/cvmfs/oasis.opensciencegrid.org/mis/apptainer/current/bin/apptainer exec -B /cvmfs,/exp,/nashome,/opt /cvmfs/singularity.opensciencegrid.org/fermilab/fnal-dev-sl7:latest ./create_dunesw.sh
+./create_analysis_area.sh # install python analysis code
