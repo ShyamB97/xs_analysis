@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+directories=("/cvmfs" "/exp" "/nashome" "/opt" "/run/user" "/etc/hostname" "/etc/hosts" "/etc/krb5.conf" "/home" "/pnfs/dune")
+
+mounts=""
+
+for d in ${directories[@]}
+do
+    if [ -d "$d" ] || [ -f "$d" ]; then
+        mounts+="$d," 
+    fi
+done
+mounts=`echo $mounts | rev | cut -c2- | rev`
+
+echo $mounts
+/cvmfs/oasis.opensciencegrid.org/mis/apptainer/current/bin/apptainer shell --shell=/bin/bash -B $mounts --ipc --pid /cvmfs/singularity.opensciencegrid.org/fermilab/fnal-dev-sl7:latest; export UPS_OVERRIDE="-H Linux64bit+3.10-2.17"

@@ -1,10 +1,10 @@
 #!/bin/bash
+set -e
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo $SCRIPT_DIR
+cd .. # create in main area
 
-# also can clone the cross section code + dune sw and install both
-
-# /cvmfs/oasis.opensciencegrid.org/mis/apptainer/current/bin/apptainer shell --shell=/bin/bash \ -B /cvmfs,/exp,/nashome,/opt,/run/user,/etc/hostname,/etc/hosts,/etc/krb5.conf --ipc --pid \ /cvmfs/singularity.opensciencegrid.org/fermilab/fnal-dev-sl7:latest export UPS_OVERRIDE="-H Linux64bit+3.10-2.17"
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 mkdir dune
 cd dune
