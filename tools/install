@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-echo $SCRIPT_DIR
 
-container exec ./install_miniforge.sh
-container exec ./create_dunesw.sh
+container exec "bash $SCRIPT_DIR/install_miniforge.sh" # install python 3 environment
+container exec "bash $SCRIPT_DIR/create_dunesw.sh" # install larsoft and protoduneana
 ./create_analysis_area.sh # install python analysis code
