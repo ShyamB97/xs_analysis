@@ -1,9 +1,8 @@
 #!/bin/bash
-set -e
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo $SCRIPT_DIR
-cd .. # create in main area
+cd $SCRIPT_DIR/.. # create in main area
 
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 mkdir dune
