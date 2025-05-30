@@ -7,7 +7,7 @@ cd $SCRIPT_DIR/.. # create in main area
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 mkdir dune
 cd dune
-mrb newDev -v v10_07_00 -q e26:prof
+mrb newDev -v v10_08_00 -q e26:prof
 source localProducts*/setup
 
 mrb g protoduneana
@@ -17,7 +17,7 @@ cd -
 
 mrb g dunesw
 cd srcs/dunesw/;
-git checkout v10_07_00d00
+git checkout v10_08_00d00
 cd -
 
 mrbsetenv
