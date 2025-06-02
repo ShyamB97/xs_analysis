@@ -2,7 +2,7 @@
 - cvmfs
 - you need permission to clone the pi0-analysis repo.
 
-## First time installtion
+## First time installation
 ```
 source setup_install_tools.sh
 install
