@@ -4,7 +4,7 @@ set -e
 
 mode=$1 # exec or shell
 
-directories=("/cvmfs" "/exp" "/nashome" "/opt" "/run/user" "/etc/hostname" "/etc/hosts" "/etc/krb5.conf" "/home" "/pnfs/dune")
+directories=("/cvmfs" "/exp" "/nashome" "/opt" "/run/user" "/etc/hostname" "/etc/hosts" "/etc/krb5.conf" "/home" "/pnfs/dune" "/data/dune/")
 
 mounts=""
 
