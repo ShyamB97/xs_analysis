@@ -3,10 +3,12 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo $SCRIPT_DIR
 cd $SCRIPT_DIR/.. # create in main area
 
+source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh # do this first to use a more up-to date version of git
+
 get_version () {
     {
         cd /tmp/
-        git clone https://github.com/DUNE/protoduneana.git
+        git clone https://github.com/DUNE/protoduneana.git >/dev/null
         cd protoduneana
         git switch feature/calcuttj_fitter_redesign >/dev/null # the output of this command ends up in the return value if not suppressed (for some reason?)
         match=(`cat ups/product_deps | grep duneprototypes -m 1`)
@@ -21,7 +23,8 @@ get_version () {
 }
 VERSION=$(get_version)
 
-source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
+echo "dunesw version:" $VERSION
+
 mkdir dune
 cd dune
 mrb newDev -v $VERSION -q e26:prof
@@ -34,7 +37,7 @@ cd -
 
 mrb g dunesw
 cd srcs/dunesw/;
-git checkout $VERSION
+git switch $VERSION
 cd -
 
 mrbsetenv
