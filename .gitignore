@@ -2,3 +2,4 @@ install/*
 dune/*
 pi0-analysis/*
 work/*
+*.pdf
