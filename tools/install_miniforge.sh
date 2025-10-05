@@ -9,9 +9,9 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforg
 bash Miniforge3-$(uname)-$(uname -m).sh -b -s -p miniforge/
 eval "$(miniforge/bin/conda shell.bash hook)"
 # conda init, skip this, as it add env to path
-conda create -y -n python3.10 python=3.10
+conda create -y -n python3.13 python=3.13
 conda install -y libstdcxx-ng # required to tables, used by pandas
-conda activate python3.10
+conda activate python3.13
 rm Miniforge3-$(uname)-$(uname -m).sh
 
 
