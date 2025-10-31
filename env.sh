@@ -10,7 +10,7 @@ mrbsetenv
 export PYTHONPATH=
 export PYTHONHOME=
 eval "$($SCRIPT_DIR/install/miniforge/bin/conda shell.bash hook)"
-conda activate python3.10
+conda activate python3.13
 export PATH="$SCRIPT_DIR/install/miniforge/envs/python3.10/bin:$PATH"
 which python
 source $SCRIPT_DIR/pi0-analysis/analysis/env.sh 
