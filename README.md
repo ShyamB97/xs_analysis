@@ -6,10 +6,10 @@
 ```
 source setup_install_tools.sh
 install
-container shell # start an apptainer shell
 source env.sh
 mkdir work # make a work directory area that is not tracked by git
 ```
+<!-- container shell # start an apptainer shell -->
 
 ## Each time you login
 ```
