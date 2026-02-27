@@ -1,10 +1,10 @@
 #!/bin/bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-echo $SCRIPT_DIR
-source setup_install_tools.sh
-source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
-source $SCRIPT_DIR/dune/localProducts_*/setup 
-mrbsetenv
+# echo $SCRIPT_DIR
+# source setup_install_tools.sh
+# source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
+# source $SCRIPT_DIR/dune/localProducts_*/setup 
+# mrbsetenv
 
 # this is specifically for activating the correct python
 export PYTHONPATH=
