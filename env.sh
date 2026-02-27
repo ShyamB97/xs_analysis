@@ -13,6 +13,6 @@ eval "$($SCRIPT_DIR/install/miniforge/bin/conda shell.bash hook)"
 conda activate python3.13
 export PATH="$SCRIPT_DIR/install/miniforge/envs/python3.10/bin:$PATH"
 which python
-source $SCRIPT_DIR/pi0-analysis/analysis/env.sh 
+source $SCRIPT_DIR/pion-argon-xs-analysis/analysis/env.sh 
 
-pip install -r $SCRIPT_DIR/pi0-analysis/analysis/requirements.txt
+pip install -r $SCRIPT_DIR/pion-argon-xs-analysis/analysis/requirements.txt

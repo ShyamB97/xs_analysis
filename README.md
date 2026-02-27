@@ -1,6 +1,6 @@
 ## Requirements
 - cvmfs
-- you need permission to clone the pi0-analysis repo.
+- you need permission to clone the pion-argon-xs-analysis repo.
 
 ## First time installation
 ```
